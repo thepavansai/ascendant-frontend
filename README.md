@@ -1,80 +1,58 @@
-# anything-web
+# 🧠 Ascendant
 
-Next.js 16 web app — extracted from the `anything` monorepo as a standalone npm project.
+> **Train Your Brain. Level Up Your Life.**
 
-## Stack
+Ascendant is a Next.js 16 gamified learning platform designed to help children (ages 9-12) build critical thinking, decision-making, and AI literacy through mission-based challenges.
 
-- **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript 5
-- **Styling**: Tailwind CSS v4 + shadcn/ui (New York style)
-- **Auth**: better-auth
-- **Data fetching**: TanStack Query v5
-- **Database**: Neon (Postgres serverless)
-- **Testing**: Vitest + Testing Library
+## 🚀 Features
 
-## Getting Started
+- **Mission-Based Learning**: Real-world scenarios that replace traditional textbooks.
+- **Role-Based Portals**:
+  - **Child Dashboard**: Immersive progression tracking, XP, streaks, and active missions.
+  - **Parent Portal**: Monitor child progression, approve accounts, and review metrics.
+  - **Admin Center**: Manage global users and craft new missions.
+- **AI-Powered Evaluation**: Instant, personalized feedback on reasoning quality.
+- **Beautiful UI**: Highly polished, modern interface with smooth `framer-motion` animations, glassmorphism, and responsive design.
 
-### 1. Install dependencies
+## 🛠 Tech Stack
 
+- **Frontend Framework**: Next.js 16 (App Router)
+- **Language**: TypeScript
+- **State & Data Fetching**: TanStack Query v5 & Zustand
+- **Styling**: Tailwind CSS v4 & Framer Motion
+- **UI Components**: shadcn/ui & Lucide Icons
+- **Backend Integration**: Secured via JWT to a custom Spring Boot Backend.
+
+## 📦 Quick Start
+
+### 1. Prerequisites
+- Node.js 18+
+- The **Ascendant Spring Boot Backend** running locally on port `8080`.
+
+### 2. Installation
 ```bash
+git clone https://github.com/thepavansai/ascendant-frontend.git
+cd ascendant-frontend
 npm install
 ```
 
-### 2. Configure environment
-
-```bash
-cp .env.example .env
-# Fill in the values in .env
+### 3. Environment Setup
+Create a `.env` file in the root directory to point to your backend:
+```env
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8080
 ```
 
-### 3. Run the dev server
-
+### 4. Run Development Server
 ```bash
 npm run dev
-# → http://localhost:4000
 ```
+Navigate to `http://localhost:4000` to interact with the application!
 
-## Scripts
+## 📂 Architecture
 
-| Script | Description |
-|--------|-------------|
-| `npm run dev` | Start development server on port 4000 |
-| `npm run build` | Production build |
-| `npm start` | Start production server |
-| `npm run typecheck` | TypeScript type-check (no emit) |
-| `npm test` | Run tests once (Vitest) |
-| `npm run test:watch` | Run tests in watch mode |
+- `/src/app/`: Next.js App Router with secure layout groups (`(admin)`, `(parent)`, `(child)`).
+- `/src/components/`: Highly reusable UI elements, including specialized charts, layouts, and `shadcn/ui` primitives.
+- `/src/lib/`: The core data layer containing Axios interceptors, React Query hooks, and Zustand global stores.
 
-## Project Structure
-
-```
-src/
-├── app/                  # Next.js App Router pages & API routes
-│   ├── (admin)/          # Admin route group
-│   ├── (auth)/           # Auth route group (login, register, etc.)
-│   ├── (child)/          # Child dashboard, missions, profile
-│   ├── (parent)/         # Parent dashboard & children management
-│   ├── account/          # Sign-in / sign-up / logout
-│   └── api/              # API routes (auth, session)
-├── components/
-│   ├── charts/           # Recharts-based chart components
-│   ├── evaluation/       # Mission evaluation UI
-│   ├── layout/           # Sidebar & bottom tab bar
-│   ├── mission/          # Mission cards & chips
-│   ├── player/           # XP bar, level badge, streaks, etc.
-│   └── ui/               # shadcn/ui primitives
-├── hooks/                # Shared React hooks
-├── lib/
-│   ├── api/              # API client & typed fetchers
-│   ├── auth.ts           # better-auth server config
-│   ├── auth-client.ts    # better-auth browser client
-│   ├── fonts.ts          # Next.js font definitions
-│   ├── hooks/            # Data-layer hooks (React Query)
-│   ├── store/            # Zustand stores
-│   ├── types/            # Shared TypeScript types
-│   └── utils.ts          # cn() and other utilities
-├── middleware.ts          # Auth middleware (route protection)
-└── utils/                # Stream response & upload helpers
-```
-# ascendant-frontend
-# ascendant-frontend
+## 📄 License
+&copy; 2026 Ascendant. All rights reserved.

@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+
+# Build
+/build/
+/dist/
+
+# Environment
+.env
+.env.local
+.env.production.local
+.env.development.local
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+/.vitest/
+/coverage/
+
+# Misc
+.DS_Store
+*.log
+seed_mock_users.sh
+.vscode/
+INTEGRATION_TEST.md
+BACKEND_INTEGRATION.md
+QUICK_START.md
