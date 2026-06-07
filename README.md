@@ -2,6 +2,9 @@
 
 > **Train Your Brain. Level Up Your Life.**
 
+**🌍 Live Frontend:** [ascendantt.netlify.app](https://ascendantt.netlify.app)  
+**⚙️ Live Backend:** [ascendant-backend.onrender.com](https://ascendant-backend.onrender.com)  
+
 Ascendant is a Next.js 16 gamified learning platform designed to help children (ages 9-12) build critical thinking, decision-making, and AI literacy through mission-based challenges.
 
 ## 🚀 Features
@@ -39,7 +42,7 @@ npm install
 ### 3. Environment Setup
 Create a `.env` file in the root directory to point to your backend:
 ```env
-NEXT_PUBLIC_BACKEND_URL=http://localhost:8080
+NEXT_PUBLIC_BACKEND_URL=https://ascendant-backend.onrender.com
 ```
 
 ### 4. Run Development Server
