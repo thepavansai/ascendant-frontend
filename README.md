@@ -4,6 +4,7 @@
 
 **🌍 Live Frontend:** [ascendantt.netlify.app](https://ascendantt.netlify.app)  
 **⚙️ Live Backend:** [ascendant-backend.onrender.com](https://ascendant-backend.onrender.com)  
+[![Docker](https://img.shields.io/badge/Docker_Hub-thepavansai%2Fascendant--frontend-blue?style=flat-square&logo=docker)](https://hub.docker.com/repository/docker/thepavansai/ascendant-frontend/)
 
 Ascendant is a Next.js 16 gamified learning platform designed to help children (ages 9-12) build critical thinking, decision-making, and AI literacy through mission-based challenges.
 
@@ -27,6 +28,13 @@ Ascendant is a Next.js 16 gamified learning platform designed to help children (
 - **Backend Integration**: Secured via JWT to a custom Spring Boot Backend.
 
 ## 📦 Quick Start
+
+### 🚀 Run Pre-built Image from Docker Hub
+You can run the entire frontend instantly without building the code by pulling the official image:
+```bash
+# You can pass NEXT_PUBLIC_BACKEND_URL at runtime if needed
+docker run -p 3000:3000 thepavansai/ascendant-frontend:latest
+```
 
 ### 1. Prerequisites
 - Node.js 18+
